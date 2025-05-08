@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mayhem Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="setupScreen">
+    <h1>Mayhem Game</h1>
+    <!--
+      Game rules area
+    -->
+    <div class="rules">
+      <h2>Rules</h2>
+      <ul>
+        <li>Two players take turns placing their colored stones on empty hexagons.</li>
+        <li>Player 1 aims to connect the <b>top</b> and <b>bottom</b> edges of the board.</li>
+        <li>Player 2 aims to connect the <b>left</b> and <b>right</b> edges.</li>
+        <li>The four corners count as part of both adjacent sides.</li>
+        <li>The first player to form an unbroken chain of their color between their sides wins!</li>
+      </ul>
+    </div>
+    <!--
+      Player 1 input
+    -->
+    <div>
+      <label>Player 1 Name: <input type="text" id="p1Name" value="Player 1"></label>
+      <label>Color: <input type="color" id="p1Color" value="#ff0000"></label>
+    </div>
+    <!--
+      Player 2 input
+    -->
+    <div>
+      <label>Player 2 Name: <input type="text" id="p2Name" value="Player 2"></label>
+      <label>Color: <input type="color" id="p2Color" value="#0000ff"></label>
+    </div>
+    <!--
+      Start Game button
+    -->
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <!--
+    This section is hidden by default and shown only after starting the game.
+  -->
+  <div id="gameScreen" style="display:none;">
+    <div class="game-area">
+      <!--
+        Turn display
+      -->
+      <h2 id="turnDisplay"></h2>
+      <!--
+        Holds the game board where players will play
+      -->
+      <div class="canvas-container">
+        <canvas id="gameCanvas"></canvas>
+      </div>
+      <!-- Result display shows the win message when the game ends -->
+      <div id="resultDisplay"></div>
+      <!--Buttom to reset the game-->
+      <button onclick="resetGame()" class="reset-btn">Reset Game</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
