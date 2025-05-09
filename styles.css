@@ -1,0 +1,155 @@
+/* Base body styling for centering content and setting background. */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Shared styles for both setup and game screens  */
+#setupScreen,
+#gameScreen {
+    background: #fff;
+    padding: 40px 60px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.09);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto 0;
+    /* Top margin for spacing */
+}
+
+/* Title styling for the setup screen  */
+#setupScreen h1 {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+/* Rules container styling  */
+.rules {
+    text-align: center;
+    margin: 0 auto 32px;
+    background: #f9f9f9;
+    padding: 24px 36px;
+    border-radius: 12px;
+    max-width: 540px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+    font-size: 1.25rem;
+    display: inline-block;
+}
+
+/* Rules heading styling */
+.rules h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Rules list styling  */
+.rules ul {
+    margin: 0;
+    padding-left: 24px;
+    text-align: left;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Player input labels */
+#setupScreen label {
+    margin: 0 16px;
+    font-size: 1.15rem;
+}
+
+/* Text input styling */
+#setupScreen input[type="text"] {
+    font-size: 1.1rem;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 6px;
+    /* Spacing between label and input */
+}
+
+/* Color picker input styling */
+#setupScreen input[type="color"] {
+    width: 36px;
+    height: 36px;
+    border: none;
+    margin-left: 8px;
+    vertical-align: middle;
+    /* Align with text input */
+}
+
+/* Button styling for both setup and reset buttons  */
+#setupScreen button,
+.reset-btn {
+    margin-top: 28px;
+    padding: 14px 32px;
+    font-size: 1.2rem;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+/* Button hover state */
+#setupScreen button:hover,
+.reset-btn:hover {
+    background: #388e3c;
+}
+
+/* Game area container */
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Turn/result display styling  */
+#turnDisplay,
+#resultDisplay {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Result message specific styling */
+#resultDisplay {
+    margin: 15px 0;
+    color: green; /* Success color for win message */
+    font-weight: normal;
+}
+
+/* Canvas container styling */
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Canvas styling  */
+canvas {
+    margin: 0 auto;
+    background: #fff;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
